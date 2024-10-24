@@ -38,7 +38,10 @@ export default {
   },
 
   mounted() {
-    this.url = api.getApiUrl()
+    const url = api.getApiUrl()
+    if (url && url != this.url) {
+      this.url = url;
+    }
   }
 }
 </script>
